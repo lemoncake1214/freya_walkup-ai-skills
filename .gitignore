@@ -11,9 +11,14 @@ private/
 secrets/
 *.csv
 *.xlsx
+*.pdf
+*.zip
+*.jsonl
 
 # Generated outputs
 outputs/
 generated/
 generated-images/
 results/
+reports/
+exports/

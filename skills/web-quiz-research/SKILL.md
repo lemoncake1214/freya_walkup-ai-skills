@@ -29,9 +29,16 @@ Do not ask the user to repeat competitor lists, markets, target users, control g
 
 ## Default Path Mapping
 
-Use the author's current Hot_quiz knowledge base as the default walking research workspace only when those paths exist locally. Other users should provide their own `index` and `results` paths; explicit user-provided paths always override these defaults.
+This skill is team-shareable and should not require the author's local knowledge base. Prefer these sources in order:
 
-If the user says `walking index`, `Hot_quiz index`, or provides `/Users/fengrui1/Desktop/Hot_quiz/index`, map it to:
+1. Explicit `index` path provided by the user.
+2. Pasted project document information in the prompt.
+3. A Markdown file in a user-provided index directory.
+4. Author-only local fallback paths, only when they exist on the current machine.
+
+Team members should provide their own `index` and `results` paths, or paste the project document directly. Explicit user-provided paths always override any fallback.
+
+If the original author says `walking index`, `Hot_quiz index`, or provides `/Users/fengrui1/Desktop/Hot_quiz/index`, map it to this author-only fallback path only when it exists:
 
 `/Users/fengrui1/Desktop/Hot_quiz/index`
 
@@ -45,7 +52,7 @@ Current expected walking index file:
 
 `/Users/fengrui1/Desktop/Hot_quiz/index/WalkUp 健走知识库.md`
 
-If the user says `walking results`, `Hot_quiz results`, or provides `/Users/fengrui1/Desktop/Hot_quiz/results`, map it to the results directory:
+If the original author says `walking results`, `Hot_quiz results`, or provides `/Users/fengrui1/Desktop/Hot_quiz/results`, map it to this author-only fallback results directory only when it exists:
 
 `/Users/fengrui1/Desktop/Hot_quiz/results`
 
@@ -54,6 +61,8 @@ If the results path is a directory, create a new Markdown file inside it instead
 `web-quiz-research-{YYYY-MM-DD}-{topic-slug}.md`
 
 If the index defines `default_results_path`, prefer that path only when it is more specific than the user's provided results path. If the user explicitly provides `/Users/fengrui1/Desktop/Hot_quiz/results`, use that directory and create a new `.md` file there.
+
+If no usable index path, pasted document information, or author-only fallback exists, ask the user to provide either an index Markdown path, a directory containing one index Markdown file, or pasted project information. Do not require a local knowledge base.
 
 ## Workflow
 
@@ -161,6 +170,15 @@ When writing results:
 - Do not write browsing logs.
 - Save only the final structured report.
 - After writing, reply with both the Markdown file path and the PDF file path, plus a short summary.
+
+## Team Data Safety Rules
+
+- Do not commit real index files, generated results reports, PDFs, platform exports, screenshots with account information, cookies, tokens, credentials, or raw ad/user data into the skill repository.
+- Treat pasted business context, index files, and results as project data. Use them for the current run only unless the user explicitly asks to save them.
+- If the repository is public or shared outside the immediate team, keep only reusable methodology, templates, and scripts in the repo.
+- Results files should live in a user-provided local `results` directory or private workspace, not inside the shared skill repository.
+- When using Chrome-backed retrieval, never record session cookies, account identifiers, private inbox content, billing pages, or non-research personal data in the final report.
+- For competitor creative evidence, record source links and material patterns; do not download, rehost, or copy proprietary creative assets into the repository.
 
 ## Token Saving Rules
 
