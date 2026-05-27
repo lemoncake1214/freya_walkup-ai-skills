@@ -1,13 +1,13 @@
 ---
 name: web-quiz-research
-description: Analyze overseas Web Quiz themes using a lightweight index/results knowledge workflow with mandatory Chrome-first live retrieval. Read a project index file for business context, actually query user-provided or default sources through the user's Chrome browser when platform login, cookies, or dynamic pages matter, including Facebook, YouTube, Pinterest, Guangdada, Meta Ads Library, and Google Trends, mark public-source evidence and access limits clearly, explore both index-related themes and open health/fitness category opportunities, rank quiz themes by P0/P1/P2/P3, and write structured Markdown/PDF reports into a results file. Use for walking, stretching, fitness, yoga, low-impact workouts, health management, Meta/WebOB paid social funnels, social heat, competitor ad research, Google Trends, Guangdada, Facebook Ads Library, YouTube, Pinterest, and Facebook/Reels.
+description: Analyze overseas Web Quiz themes using a lightweight index/results knowledge workflow with mandatory Chrome-first live retrieval. Read a project index file or pasted document information for business context; actually query user-provided or default sources through the user's Chrome browser when platform login, cookies, or dynamic pages matter, including Facebook, YouTube, Pinterest, Guangdada, Meta Ads Library, and Google Trends; mark public-source evidence and access limits clearly; explore both index-related themes and open health/fitness category opportunities; rank quiz themes by P0/P1/P2/P3; and write structured Markdown/PDF reports into a results file. Use for walking, stretching, fitness, yoga, low-impact workouts, health management, Meta/WebOB paid social funnels, social heat, competitor ad research, Google Trends, Guangdada, Facebook Ads Library, YouTube, Pinterest, and Facebook/Reels.
 ---
 
 # Web Quiz Research
 
 ## Overview
 
-Use this skill to research overseas Web Quiz theme opportunities from a lightweight `index -> research -> results` workflow. The skill stores no specific business knowledge; read the user's index file for business context and write final structured findings to a results Markdown file when a path is available.
+Use this skill to research overseas Web Quiz theme opportunities from a lightweight `index/document -> research -> results` workflow. The skill stores no specific business knowledge; read the user's index file or pasted document information for business context and write final structured findings to a results Markdown file when a path is available.
 
 ## Resource Guide
 
@@ -57,7 +57,7 @@ If the index defines `default_results_path`, prefer that path only when it is mo
 
 ## Workflow
 
-1. Read exactly one index source: a mapped index file, a provided index file, a single Markdown file inside a provided index directory, or the user's pasted document information if no index path is provided.
+1. Read exactly one index source: a mapped index file, a provided Markdown file, a single Markdown file inside a provided index directory, or the user's pasted document information if no index path is provided.
 2. Extract product background, funnel, control group, markets, users, priority themes, keyword seeds, competitor pool, channel rules, entry links, results path, compliance preferences, and output preferences.
 3. Interpret the user's current focus: full report, topic-only, competitor-only, social heat-only, open exploration, testing priority-only, or write-to-file.
 4. Run two exploration lines by default:
