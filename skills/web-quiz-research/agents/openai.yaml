@@ -1,0 +1,4 @@
+interface:
+  display_name: "Web Quiz Research"
+  short_description: "Research Web Quiz themes via index/results."
+  default_prompt: "Use web-quiz-research with a walking index to research social heat, competitor ad dynamics, open health and fitness theme opportunities, P0/P1/P2/P3 testing priority, first-round test cells, compliance notes, and write a structured results Markdown report."

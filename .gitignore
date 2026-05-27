@@ -1,0 +1,19 @@
+.DS_Store
+.env
+*.log
+*.tmp
+__pycache__/
+*.pyc
+
+# Local/private data
+data/
+private/
+secrets/
+*.csv
+*.xlsx
+
+# Generated outputs
+outputs/
+generated/
+generated-images/
+results/
